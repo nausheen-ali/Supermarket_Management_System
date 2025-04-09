@@ -1,0 +1,241 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Titles */
+.p_title {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+/* Card Container */
+.my_card, .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Product Card */
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.p_image {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #28a745;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.buy-btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.buy-btn:hover {
+    background-color: #218838;
+}
+
+.out-of-stock {
+    display: inline-block;
+    background-color: gray !important;
+    color: white !important;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Category Card */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.category-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 60px 20px;
+    width: 45%;
+    min-width: 300px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    background-color: #eafbe7;
+    transform: scale(1.02);
+}
+
+.category-card a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+
+/* Cart Styles */
+.cart_container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart_container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.cart_container th, .cart_container td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart_container input[type="number"] {
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+.checkout-btn,
+.cart_container a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 5px 0 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.checkout-btn:hover,
+.cart_container a:hover {
+    background-color: #45a049;
+}
+
+.confirmation {
+    background: #d4edda;
+    border-left: 6px solid #28a745;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #155724;
+}
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.back-btn {
+    background-color: #999;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .my_card, .category-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .category-card {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        margin: 10px 10px 0 0;
+    }
+}
